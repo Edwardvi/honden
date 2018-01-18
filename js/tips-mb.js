@@ -34,7 +34,7 @@ if(localStorage.getItem("firstRun")==null)
         ,title: ['重要', 'background-color: #eee;'] 
         ,shadeClose: false
         ,style:'text-align: left'
-//        ,skin: 'footer'
+        ,skin: 'footer'
         ,yes: function(index)
         {
             //然后储存一个firstRun
