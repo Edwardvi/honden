@@ -1,8 +1,10 @@
 //假设,本地存储一个firstRun
 /**第一次进来先判断有没有**/
-if(localStorage.getItem("firstRun")==null){
+if(localStorage.getItem("firstRun")==null)
+{
     //也就是说第一次进来的时候
-    layer.open({
+    layer.open
+    ({
         className: 'project-category' ,
         content: `在继续浏览本公司网站前，请您仔细阅读本重要提示，根据您的具体情况在本页面底部选择继续浏览还是放弃。点击[接受]键，视为您已经阅读并愿意遵守本提示内容。<br />
         <br />
@@ -24,37 +26,33 @@ if(localStorage.getItem("firstRun")==null){
         3、投资于所管理私募基金的私募基金管理人及其从业人员；<br />
         4、中国证监会规定的其他投资者。<br />
         <br />
-        如果您或您所代表的机构确认是一名[合格投资者]，具有相应的风险识别能力和风险承受能力，并承诺遵守适用的有关法规，请点击[接受]键，以继续浏览本公司网站。如您或您所代表的机构不同意任何有关条款，请按[拒绝]键，结束浏览本公司网站。<br />
+        如果您或您所代表的机构确认是一名[合格投资者]，具有相应的风险识别能力和风险承受能力，并承诺遵守适用的有关法规，请点击[接受]键，以继续浏览本公司网站。如您或您所代表的机构不同意任何有关条款，请结束浏览本公司网站。<br />
         <br />
         <div text-align:'right'>河南浩德金控投资控股有限公司</div>`
-        
-        ,btn: ['拒绝', '接受']
+        ,type: 0
+        ,btn: ['接受']
         ,title: ['重要', 'background-color: #eee;'] 
         ,shadeClose: false
         ,style:'text-align: left'
 //        ,skin: 'footer'
-        ,yes: function(index){
-            location.reload();
+        ,yes: function(index)
+        {
+            //然后储存一个firstRun
+            localStorage.setItem("firstRun","1");
             layer.close(index);
         }
-        });
+        // ,no: function(index)
+        // {    
+        // }
+    });
                 
 
     
-    //用alert模拟弹窗
-    localStorage.setItem("firstRun","1");//然后储存一个firstRun
-  }
-  else{
+
+    
+}
+else
+{
     //也就是说不是第一次,已经存在
     //没有弹窗
-  }
-
-
-//   layer.open({
-//     content: '您确定要刷新一下本页面吗？'
-//     ,btn: ['刷新', '不要']
-//     ,yes: function(index){
-//       location.reload();
-//       layer.close(index);
-//     }
-//   });
+}
