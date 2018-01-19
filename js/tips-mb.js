@@ -5,7 +5,7 @@ if(localStorage.getItem("firstRun")==null)
     //也就是说第一次进来的时候
     layer.open
     ({
-        className: 'project-category' ,
+        className: 'pre-scrollable ',
         content: `在继续浏览本公司网站前，请您仔细阅读本重要提示，根据您的具体情况在本页面底部选择继续浏览还是放弃。点击[接受]键，视为您已经阅读并愿意遵守本提示内容。<br />
         <br />
         证券投资具有一定风险，本网站所载各种信息和数据等仅供参考，并不构成广告或销售要约，或任何投资意见和建议。产品的过往业绩并不预示其未来表现，投资者应仔细阅读产品相关法律文件以了解其风险因素，并自行承担投资风险。<br />
@@ -34,7 +34,7 @@ if(localStorage.getItem("firstRun")==null)
         ,title: ['重要', 'background-color: #eee;'] 
         ,shadeClose: false
         ,style:'text-align: left'
-        ,skin: 'footer'
+        // ,skin: 'footer'
         ,yes: function(index)
         {
             //然后储存一个firstRun
