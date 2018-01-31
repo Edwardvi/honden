@@ -1,9 +1,9 @@
 //假设,本地存储一个firstRun
 /**第一次进来先判断有没有**/
-if(localStorage.getItem("firstRun")==1)
+if(localStorage.getItem("firstRun")==null)
 {
     //也就是说第一次进来的时候
-    layer.open
+    // layer.open
     ({
         className: 'pre-scrollable ',
         content: `在继续浏览本公司网站前，请您仔细阅读本重要提示，根据您的具体情况在本页面底部选择继续浏览还是放弃。点击[接受]键，视为您已经阅读并愿意遵守本提示内容。<br />
