@@ -1,6 +1,6 @@
 //假设,本地存储一个firstRun
 /**第一次进来先判断有没有**/
-if(localStorage.getItem("firstRun")==null)
+if(localStorage.getItem("firstRun")==1)
 {
     //也就是说第一次进来的时候
     layer.open
